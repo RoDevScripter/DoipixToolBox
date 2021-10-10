@@ -4,12 +4,12 @@ call :IsAdmin
 echo off
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\NDIS" /v "Start" /t REG_DWORD /d "0" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Services\ACPI" /v "Start" /t REG_DWORD /d "0" /f
-powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/SteavenGamerYT/SteavenToolBox/main/runtime.ps1'))"
+powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/DoipixGamerYT/DoipixToolBox/main/runtime.ps1'))"
 :start
-title SteavenToolbox 1.7
+title DoipixToolbox 1.7
 cls
 echo =====================================================================
-echo "SteavenToolbox 1.7 | We care about your pc!"
+echo "DoipixToolbox 1.7 | We care about your pc!"
 echo =====================================================================
 echo ---------------------------------------------------------------------------------------------------------------------
 ECHO "TWEAK | FIXED | CLEANER | OTHER"                         Installer
@@ -38,13 +38,13 @@ if '%choice%'=='6' goto 6
 if '%choice%'=='7' goto 15
 if '%choice%'=='8' goto updatefix
 if '%choice%'=='9' goto rightclick
-if '%choice%'=='10' goto powershell iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/ToolBox.ps1'))
+if '%choice%'=='10' goto powershell iex ((New-Object System.Net.WebClient).DownloadString('https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/ToolBox.ps1'))
 if '%choice%'=='11' goto 11
 if '%choice%'=='12' goto Choice
 if '%choice%'=='13' goto 17
 if '%choice%'=='14' goto 18
 if '%choice%'=='15' goto 24
-if '%choice%'=='16' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/onedrive.ps1'))"
+if '%choice%'=='16' powershell.exe "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/omartube706/DoipixToolBox/main/onedrive.ps1'))"
 if '%choice%'=='17' choco install vcredist2005 vcredist2008 vcredist2010  vcredist2012 msvisualcplusplus2012-redist vcredist2013 vcredist2017 vcredist140 vcredist-all jre8 directx -y & DISM /Online /Enable-Feature /FeatureName:NetFx3 & DISM /Online /Enable-Feature /FeatureName:NetFx4 /All & dism /Online /enable-feature /FeatureName:"LegacyComponents" /All & dism /Online /enable-feature /FeatureName:"DirectPlay" /All
 if '%choice%'=='18' goto themes
 if '%choice%'=='19' goto store22
@@ -52,7 +52,7 @@ ECHO "%choice%" is not valid, try again
 ECHO.
 goto start
 :1
-title SteavenToolbox 1.7
+title DoipixToolbox 1.7
 cls
 echo ---------------------------------------------------------------------------------------------------------------------
 echo Print Spooler for Printer (services)
@@ -92,7 +92,7 @@ if '%choice%'=='3' Reg.exe delete "HKLM\SOFTWARE\Policies\Microsoft\Windows\Wind
 if '%choice%'=='4' Reg.exe add "HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /v "DoNotConnectToWindowsUpdateInternetLocations" /t REG_DWORD /d "1" /f
 if '%choice%'=='5' NetSh Advfirewall set allprofiles state on
 if '%choice%'=='6' NetSh Advfirewall set allprofiles state off
-if '%choice%'=='7' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/dControl.exe & start /wait c:\dControl.exe
+if '%choice%'=='7' wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/dControl.exe & start /wait c:\dControl.exe
 if '%choice%'=='9' dism /online /NoRestart /Enable-Feature /FeatureName:Internet-Explorer-Optional-amd64
 if '%choice%'=='10' dism /online /NoRestart /Disable-Feature /FeatureName:Internet-Explorer-Optional-amd64
 if '%choice%'=='11' DISM /online /NoRestart /Enable-feature /featurename:WindowsMediaPlayer
@@ -105,7 +105,7 @@ ECHO.
 goto 1
 :2
 cls
-title SteavenToolBox 1.6.0 Clear Event Logs
+title DoipixToolBox 1.6.0 Clear Event Logs
 color 7
 FOR /F "tokens=1, 2 * " %%V IN ('bcdedit') DO SET adminTest=%%V
 IF (%adminTest%)==(Access) goto noAdmin
@@ -118,7 +118,7 @@ goto :eof
 goto start
 :3
 cls
-title SteavenToolBox 1.6.0 Clear Cache
+title DoipixToolBox 1.6.0 Clear Cache
 color 4
 SC stop DoSvc
 del c:\WIN386.SWP
@@ -139,7 +139,7 @@ del /s /f /q "%USERPROFILE%\Cookies"\*.*
 goto start
 :4
 cls
-title SteavenToolBox 1.6.0 Hibernation "| Fastboot | Sleepmode | Sysmain"
+title DoipixToolBox 1.6.0 Hibernation "| Fastboot | Sleepmode | Sysmain"
 echo Hibernation / Fastboot / Sleep mode
 echo 1. Disable : hiberfil.sys
 echo 2. Enable  : hiberfil.sys
@@ -969,7 +969,7 @@ Reg.exe add "HKCR\Drive\shell\runas\command" /v "IsolatedCommand" /t REG_SZ /d "
 goto start
 :6
 cls
-title SteavenToolBox 1.6.0 Disable Services
+title DoipixToolBox 1.6.0 Disable Services
 SC STOP Spooler
 SC CONFIG Spooler start= disabled
 SC STOP WMPNetworkSvc
@@ -1345,14 +1345,14 @@ wget -P c: https://dl.malwat.ch/software/useful/vmware/VMwareWorkstation16.zip
 echo Password: mysubsarethebest
 pause
 goto 11
-wget -P c: https://github.com/omartube706/SteavenToolBox/raw/main/dxwebsetup.exe
+wget -P c: https://github.com/omartube706/DoipixToolBox/raw/main/dxwebsetup.exe
 @pause
 goto 11
 :22
 cls
-Echo Welcome To Steaven Windows 10 Cleanup
+Echo Welcome To Doipix Windows 10 Cleanup
 Echo This will add users/apps/ delete apps/users/settings /modifie settings
-echo Recommend in frecsh install of Steaven Windows 10
+echo Recommend in frecsh install of Doipix Windows 10
 pause
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v "ClearPageFileAtShutdown" /t REG_DWORD /d "1" /f
 Reg.exe add "HKLM\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1" /v "Attributes" /t REG_SZ /d "2" /f
@@ -1630,7 +1630,7 @@ pause
 goto 11
 :winrar2
 cls
-wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/Themes.exe
+wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/DoipixToolBox/raw/main/Themes.exe
 cd C:\Program Files\WinRAR"
 "C:\Program Files\WinRAR\Themes.exe" -s2
 goto 11
@@ -1654,13 +1654,13 @@ set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,100%
 if '%choice%'=='0' goto start
-if '%choice%'=='1' cls & slmgr/ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 & slmgr /skms kms8.msguides.com & slmgr /ato & echo cracked windows 10 by steavengameryt & pause & goto 24
-if '%choice%'=='2' cls & slmgr /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 & slmgr /skms kms8.msguides.com & slmgr /ato & echo cracked windows 8.1 by steavengameryt & pause & goto 24
-if '%choice%'=='3' cls & wusa /uninstall /kb:971033 & SLMGR -REARM & echo cracked windows 7 by steavengameryt & pause & goto 24
+if '%choice%'=='1' cls & slmgr/ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 & slmgr /skms kms8.msguides.com & slmgr /ato & echo cracked windows 10 by Doipixgameryt & pause & goto 24
+if '%choice%'=='2' cls & slmgr /ipk GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 & slmgr /skms kms8.msguides.com & slmgr /ato & echo cracked windows 8.1 by Doipixgameryt & pause & goto 24
+if '%choice%'=='3' cls & wusa /uninstall /kb:971033 & SLMGR -REARM & echo cracked windows 7 by Doipixgameryt & pause & goto 24
 if '%choice%'=='4' goto 2016crack
 if '%choice%'=='5' goto 2019crack
-if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/SteavenToolBox/raw/main/rarreg.key
-if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & wget -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/SteavenToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
+if '%choice%'=='6' del "C:\Program Files\WinRAR\rarreg.key" & wget -P "C:\Program Files\WinRAR" https://github.com/omartube706/DoipixToolBox/raw/main/rarreg.key
+if '%choice%'=='7' md "%programdata%\TechSmith\Camtasia Studio 9\" & attrib -R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini" & del "C:\ProgramData\TechSmith\Camtasia Studio 9\RegInfo.ini"  & wget -P "%programdata%\TechSmith\Camtasia Studio 9\" https://raw.githubusercontent.com/omartube706/DoipixToolBox/main/RegInfo.ini & attrib +R "F:\Software\Editors\Camtasia\8.6.0\Crack\RegInfo.ini"
 ECHO "%choice%" is not valid, try again
 ECHO.
 goto 24
@@ -1903,18 +1903,18 @@ cls
 Echo 1. sonic
 echo 2. Roblox
 echo 3. Rocket League
-echo 4. Steaven Theme
+echo 4. Doipix Theme
 echo 5. Call of duty Black Ops 4
 echo ---------------------------------------------------------------------------------------------------------------------
 echo 0. Back to menu
 set choice=
 set /p choice=Type the number.
 if not '%choice%'=='' set choice=%choice:~0,1%
-if '%choice%'=='1' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
-if '%choice%'=='2' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
-if '%choice%'=='3' taskkill /f /im explorer.exe & wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
-if '%choice%'=='4' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/Steaven.deskthemepack & start /wait c:\Steaven.deskthemepack & goto themes
-if '%choice%'=='5' wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/call-of-duty-black-ops-4.deskthemepack & start /wait c:\call-of-duty-black-ops-4.deskthemepack & goto themes
+if '%choice%'=='1' taskkill /f /im explorer.exe & wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/sonic.exe & start /wait c:\sonic.exe & start explorer.exe & goto themes
+if '%choice%'=='2' taskkill /f /im explorer.exe & wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/roblox1.exe & start /wait c:\roblox1.exe & start explorer.exe & goto themes
+if '%choice%'=='3' taskkill /f /im explorer.exe & wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/rocket-league.exe & start /wait c:\rocket-league.exe & start explorer.exe & goto themes
+if '%choice%'=='4' wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/Doipix.deskthemepack & start /wait c:\Doipix.deskthemepack & goto themes
+if '%choice%'=='5' wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/call-of-duty-black-ops-4.deskthemepack & start /wait c:\call-of-duty-black-ops-4.deskthemepack & goto themes
 if '%choice%'=='0' goto start
 goto themes
 :15
@@ -1937,7 +1937,7 @@ ECHO.
 goto 15
 :uhyperv
 cls
-wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
+wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/install_wim_tweak.exe
 cd c:\
 cd \
 install_wim_tweak.exe /o /c HyperV /r
@@ -1946,7 +1946,7 @@ install_wim_tweak.exe /o /c Microsoft-Windows-HyperV /r
 goto 15
 :ieremove
 cls
-wget -P c: https://github.com/SteavenGamerYT/SteavenToolBox/raw/main/install_wim_tweak.exe
+wget -P c: https://github.com/DoipixGamerYT/DoipixToolBox/raw/main/install_wim_tweak.exe
 cd c:\
 cd \
 install_wim_tweak.exe /o /c Microsoft-Windows-InternetExplorer /r
